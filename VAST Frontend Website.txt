@@ -2063,6 +2063,8 @@ width: 37%;
   .easy{
     width: 600px;
     height: 350px;
+    padding-botton:10px
+
   }
 
   .easy p{
@@ -2080,6 +2082,7 @@ width: 37%;
    .manage{
     width: 600px;
     height: 350px;
+    padding-bottom:10px
   }
 
   .manage p{
@@ -2096,6 +2099,7 @@ width: 37%;
   .fully{
     width: 600px;
     height: 350px;
+    padding--bottom:10px
   }
 
   .fully p{
@@ -2113,6 +2117,7 @@ width: 37%;
   .trial{
     width: 600px;
     height: 350px;
+    padding-bottom:10px
   }
 
   .trial p{
