@@ -1,0 +1,2486 @@
+APP.JSX
+
+import "./CSS/style.css"
+import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router"
+import { useState } from "react";
+import User from "./User"
+import UserEdit from "./UserEdit"
+import UserAdd from "./UserAdd"
+import World from "./World"
+import Wrapper from "./Wrapper"
+
+
+export default function Print() {
+
+window.addEventListener("scroll", function () {
+  const navbar = document.querySelector(".nav"); // ya .navbar
+  if (window.scrollY > 0) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+
+  
+    const [menuOpen, setMenuOpen] = useState(false);
+    const toggleMenu = () => setMenuOpen(!menuOpen);
+
+
+  return (
+
+    <div>
+
+      <Router>
+
+        <div className="nav">
+          <h1>VAST</h1>
+
+          <div className={`navlink ${menuOpen ? "open" : ""}`}>
+
+            <NavLink className="link" to="/">Home</NavLink>
+            <NavLink className="link" to="features">Features</NavLink>
+            <NavLink className="link" to="/about">About</NavLink>
+            <NavLink className="link" to="/app">App</NavLink>
+            <NavLink className="link" to="/blog">Blog</NavLink>
+            <NavLink className="link" to="/contact">Contact</NavLink>
+            <button>Get Started</button>
+          </div>
+
+
+          <div className="hamburger" onClick={toggleMenu}>
+            {menuOpen ? "✖" : "☰"}
+          </div>
+
+
+          <Routes>
+            <Route path="/"></Route>
+            <Route path="features"></Route>
+            <Route path="about"></Route>
+            <Route path="/app"></Route>
+            <Route path="blog"></Route>
+            <Route path="/contact"></Route>
+          </Routes>
+        </div>
+
+
+      </Router>
+      <User />
+      <UserAdd />
+      <UserEdit />
+      <World />
+      <Wrapper />
+
+    </div>
+  )
+}
+
+USER.JSX
+
+import "./CSS/style.css"
+import image65 from "./assets/image65.png"
+import image66 from "./assets/image66.png"
+import image67 from "./assets/image67.png"
+import image68 from "./assets/image68.png"
+import image69 from "./assets/image69.png"
+import image70 from "./assets/image70.png"
+import image71 from "./assets/image71.png"
+
+
+export default function User() {
+
+
+
+    return (
+        <div>
+
+            <div className="bbl">
+
+
+                <div className="p1">
+
+                    <p className="best">Best Mobile App 12 Day free</p>
+                    <h1>Make an Impression & Dive More Downloads with Vast</h1>
+
+                    <p className="lor">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididu ut labore et dolore magna aliqua. Ut enim ad minim veniamquis nostrud</p>
+
+                    <div className="mybtn">
+
+
+                        <div className="btn1">
+                            <img src={image65} alt="" />
+                        </div>
+
+                        <div className="btn2">
+                            <img src={image66} alt="" />
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div className="baby">
+                    <img src={image67} alt="" />
+                </div>
+
+            </div>
+
+            <div className="feat">
+                <p>Our App Features</p>
+                <h1>Awesome Features</h1>
+            </div>
+
+
+               <div className="cdf">
+            <div className="easy">
+                <img src={image68} alt="" />
+                <h1>Easy to Edit</h1>
+                <p>Lorem ipsum dolor sit cons ectetur adipiscing</p>
+            </div>
+
+
+            <div className="fully">
+                <img src={image69} alt="" />
+                <h1>Fully Secure</h1>
+                <p>Lorem ipsum dolor sit cons ectetur adipiscing</p>
+            </div>
+
+            <div className="manage">
+                <img src={image70} alt="" />
+                <h1>Manage User</h1>
+                <p>Lorem ipsum dolor sit cons ectetur adipiscing</p>
+            </div>
+
+
+            <div className="trial">
+                <img src={image71} alt="" />
+                <h1>Free Trail</h1>
+                <p>Lorem ipsum dolor sit cons ectetur adipiscing</p>
+            </div>
+             </div>
+        </div>
+    )
+}
+
+USERADD.JSX
+
+import image72 from "./assets//image72.png"
+import image73 from "./assets//image73.png"
+import image74 from "./assets//image74.png"
+
+
+export default function UserAdd(){
+
+    return(
+
+        <div>
+
+            <div className="cau">
+            <div className="cyc">
+                <img src={image72} alt="" />
+                 </div>
+
+                <div className="acq">
+                    <p className="ura">Our Acquaintance</p>
+                    <h1>We Are Trusted By Thousands Of People</h1>
+                    <p className="mmm">Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Ut elit tellus, luc tus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Ut elit tellus, luc tus nec ullam corpe</p>
+                    <div className="dev">
+                    <h2 className="sss"><img src={image73} alt="" /> Device Quality Design</h2>
+                    <p>Lorem ipsum dolor sit amet</p>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+
+                <div className="data">
+                    <h2 className="vvv"><img src={image74} alt="" /> Easy To Manage Data</h2>
+                    <p>Lorem ipsum dolor sit amet</p>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+
+                <div className="dis">
+                    <button>Discover More</button>
+                </div> 
+           
+                </div>
+                
+                 </div>
+        </div>
+    )
+}
+
+USEREDIT.JSX
+
+import "./CSS/style.css"
+import image75 from "./assets/image75.png"
+export default function UserEdit(){
+
+
+return(
+
+    <div>
+        <div className="icb">
+
+    
+        <div className="ipsum">
+            <p className="elit">Cool & Amazing Design</p>
+            <h1>We Develop Amazing Apps For Startups</h1>
+            <p className="cool">Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Ut elit tellus, luc tus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Ut elit tellus, luc tus nec ullam corper.</p>
+            <br />
+  
+            <p>Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Ut elit tellus, luc tus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor.</p>
+
+            <button>Discover More</button>
+
+        </div>
+
+
+        <div className="bacha">
+            <img src={image75} alt="" />
+        </div>
+         </div>
+    </div>
+)
+
+}
+
+WORLD .JSX
+
+import "./CSS/style.css"
+import image76 from "./assets/image76.png"
+import image77 from "./assets/image77.png"
+import image65 from "./assets/image65.png"
+import image66 from "./assets/image66.png"
+
+export default function World() {
+
+    return (
+
+        <div>
+
+            <div className="dgl">
+
+
+                <div className="dolor">
+
+                    <img src={image76} alt="" />
+                </div>
+
+                <div className="free">
+                    <p className="size">Download Our App</p>
+                    <h1>Get the App For Free And Start Now</h1>
+                    <p className="amet">Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Ut elit tellus, luc tus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet con Lorem ipsum dolor</p>
+
+
+                    <div className="fas">
+                        <div className="now">
+                            <img src={image65} alt="" />
+                        </div>
+
+                        <div className="tet">
+                            <img src={image66} alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="rec">
+                <p>Recent Blogs</p>
+                <h1>Our Tips And Latest News</h1>
+            </div>
+
+           <div className="allcards">
+
+          
+            <div className="card1">
+                <img src={image77} alt="" />
+                <h1>Buila A Full Web Chat App From Our Scratch</h1>
+                <button>Read More</button>
+
+            </div>
+
+            <div className="card1">
+                <img src={image77} alt="" />
+                <h1>Buila A Full Web Chat App From Our Scratch</h1>
+                <button>Read More</button>
+
+            </div>
+
+            <div className="card1">
+                <img src={image77} alt="" />
+                <h1>Buila A Full Web Chat App From Our Scratch</h1>
+                <button>Read More</button>
+
+            </div>
+
+
+
+             </div>
+
+        </div>
+    )
+}
+
+WRAPPER.JSX
+
+import "./CSS/style.css"
+export default function Wrapper(){
+
+    return(
+
+        <div>
+            <div className="footer">
+
+            <div className="vdc">
+
+                <h1>VAST</h1>
+                <p>Duis cursus, mi quis viverra ornare, eros dolor interdum nulla utimp erdiet commodo diam libero vitae nibh et jus cursus id rutrum lore imperdiet ut sem vitae risus tristique posuere</p>
+
+            </div>
+
+
+            <div className="company">
+                <h2>Company</h2>
+                <p>About Us</p>
+                <p>Contact Us</p>
+                <p>Core Services</p>
+            </div>
+
+            <div className="useful">
+                <h2>Useful Links</h2>
+                <p>Contact Us</p>
+                <p>Private Policy</p>
+                <p>App Download</p>
+            </div>
+
+
+            <div className="touch">
+                <h2>Get In Touch</h2>
+                <p><i className="fa-solid fa-phone bbb"></i> 0333-3302501</p>
+                <p><i className="fa-solid fa-message bbb"></i> talha241996@gmail.com</p>
+            </div>
+                </div>
+
+        </div>
+    )
+}
+
+STYLE.CSS
+
+body {
+  margin: 0;
+  padding: 0;
+ 
+  
+ 
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+
+}
+
+.nav h1 {
+  color: black;
+  font-size: 34px;
+  font-weight: bold;
+
+}
+
+.navlink {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+}
+
+.navlink button {
+  background-color: orange;
+  width: 150px;
+  height: 40px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 20px;
+
+}
+
+.link:hover {
+  color: brown;
+}
+
+
+.navlink button:hover {
+  background-color: purple;
+}
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+.close {
+  display: none;
+  font-size: 28px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+
+.p1 {
+  background-color: #3D244E;
+  height: auto;
+  padding-bottom: 20px;
+  padding-top: 200px;
+  padding-left: 15px;
+
+  
+
+}
+
+.p1 .best {
+  color: #F05223;
+
+}
+
+.p1 h1 {
+  font-size: 50px;
+  color: white;
+  width: 700px;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  position: relative;
+  bottom: 30px;
+}
+
+.p1 .lor {
+  position: relative;
+  bottom: 40px;
+  color: white;
+  font-size: 20px;
+  width: 700px;
+  line-height: 1.3;
+  overflow-wrap: break-word;
+}
+
+
+
+.btn2 img {
+  border-radius: 10px;
+}
+
+.mybtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  bottom: 30px;
+}
+
+
+
+.baby img {
+
+  width: 640px;
+  position: relative;
+  right: 80px;
+
+}
+
+.bbl {
+    background-color: #3D244E;
+  display: flex;
+  height: auto;
+  
+
+}
+
+.feat{
+text-align: center;
+
+}
+
+.feat p{
+  color: red;
+  font-size: 20px;
+}
+
+.easy{
+  background-color: brown;
+  width: 300px;
+  text-align: center;
+  padding-top: 40px;
+  color: white;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform: translateY(0px);
+  border-radius: 10px;
+
+}
+
+.easy p{
+  font-size: 21px;
+  padding: 10px;
+}
+
+.easy:hover {
+  transform: translateY(-10px); 
+}
+
+
+
+
+.fully{
+  background-color: brown;
+  width: 300px;
+  text-align: center;
+  padding-top: 40px;
+  color: white;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform: translateY(0px);
+  border-radius: 10px;
+
+
+
+}
+
+.fully p{
+  font-size: 21px;
+  padding: 10px;
+}
+
+.fully:hover {
+  transform: translateY(-10px); 
+}
+
+
+
+.manage{
+  background-color: brown;
+  width: 300px;
+  text-align: center;
+  padding-top: 40px;
+  color: white;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform: translateY(0px); 
+  border-radius: 10px;
+}
+
+.manage p{
+  font-size: 21px;
+  padding: 10px;
+}
+.manage:hover {
+  transform: translateY(-10px); 
+}
+
+
+.trial{
+  background-color: brown;
+  width: 300px;
+  text-align: center;
+  padding-top: 40px;
+  color: white;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform: translateY(0px); 
+  border-radius: 10px;
+  
+ 
+}
+
+.trial p{
+  font-size: 21px;
+  padding: 10px;
+}
+
+.trial:hover {
+  transform: translateY(-10px); 
+}
+
+
+
+.cdf{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 70px;
+  
+  
+}
+
+
+
+.cyc{
+  background-color: #F2F0F4;
+  padding-bottom: 20px;
+}
+
+.cyc img{
+
+  width: 550px;
+  padding-top: 50px;
+}
+
+
+
+.acq p{
+  width: 700px;
+  overflow-wrap: break-word;
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+.acq .ura{
+  color: red;
+}
+
+
+
+.dev p{
+  padding-left: 48px;
+  
+}
+
+.data p{
+  padding-left: 48px;
+}
+
+
+.dis button{
+  background-color: orange;
+  color: white;
+  width: 150px;
+  height: 40px;
+  border: none;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.dis button:hover{
+  background-color: purple;
+}
+
+.dev img{
+  width: 40px;
+  position: relative;
+  top: 19px;
+}
+
+
+
+.data img{
+  width: 40px;
+  position: relative;
+  top: 17px;
+
+}
+
+.cau{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:  #F2F0F4;
+  gap: 50px;
+    margin-top: 100px;
+    height: auto;
+    padding-bottom: 20px;
+
+}
+
+.icb{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+
+}
+
+.bacha img{
+  width: 550px;
+}
+
+
+.ipsum .cool{
+  font-size: 20px;
+  width: 700px;
+  line-height: 1.3;
+  overflow-wrap: break-word;
+}
+
+.ipsum p{
+   font-size: 20px;
+  width: 700px;
+  line-height: 1.3;
+  overflow-wrap: break-word;
+}
+
+
+
+
+.ipsum button{
+  background-color: orange;
+  color: white;
+  width: 150px;
+  height: 40px;
+  border: none;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.ipsum button:hover{
+  background-color: purple;
+}
+
+.ipsum .elit{
+  color: red;
+}
+
+.dolor img{
+  width: 550px;
+}
+
+.dolor{
+  height: 630px;
+   background-color: #3D244E
+  
+}
+
+.free .amet{
+
+  font-size: 20px;
+  width: 550px;
+  line-height: 1.3;
+  overflow-wrap: break-word;
+
+}
+
+.free .size{
+  color: red;
+}
+
+.dgl{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   background-color: #3D244E;
+   color: white;
+   padding-top: 30px;
+   
+
+}
+
+.fas{
+  display: flex;
+  align-items: center;
+}
+
+.tet img{
+  border-radius: 10px;
+}
+
+
+.rec{
+  text-align: center;
+  margin-top: 150px;
+}
+
+.rec p{
+  color: red;
+}
+
+.card1 img {
+  width: 320px;
+  border: 10px solid white;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease-in-out;
+  display: block;
+  margin:5px auto;
+  
+      
+
+
+
+}
+.card1{
+  background-color: brown;
+  width: 350px;
+  height: auto;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  
+}
+
+
+.card1 h1{
+  color: white;
+  text-align: center;
+  font-size: 30px;
+}
+
+.card1 button{
+  background-color: transparent;
+  color: white;
+  border: 3px solid black;
+  border-radius: 10px;
+  display: block;
+  margin: 20px auto 0;
+  width: 310px;
+  height: 50px;
+  font-size: 25px;
+ 
+}
+
+.card1 img:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* soft shadow */
+}
+
+.allcards{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+
+
+.footer{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: black;
+  color: white;
+  margin-top: 60px;
+}
+
+
+.vdc p{
+   font-size: 15px;
+  width: 600px;
+  overflow-wrap: break-word;
+}
+
+.bbb{
+  color: green;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:500px) {
+  
+*{
+  box-sizing: border-box;
+}
+.nav {
+  will-change: transform;
+}
+  
+  
+  .hamburger {
+    display: block;
+    background-color: orange;
+    width: 40px;
+    padding-left: 7px
+    
+  }
+
+  .navlink {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    padding-top: 30px;
+    height: auto;
+    padding-bottom: 20px;
+    width: 100%;
+  }
+
+  .link {
+    color: white;
+    font-size: 25px;
+  }
+
+  .navlink.open {
+    transform: translateX(-50%);
+  }
+
+  .close {
+    display: block;
+    font-size: 28px;
+    color: black;
+
+  }
+
+  .navlink button {
+    width: 300px;
+    border-radius: 10px;
+    height: 50px;
+    font-size: 25px;
+  }
+
+  .bbl {
+    flex-direction: column;
+    transform: translateY(-160px);
+
+    
+  }
+
+ .p1{
+  padding-left: 7px;
+ }
+  
+
+
+  .p1 h1 {
+    font-size: 26px;
+    width: 325px;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+    padding-top: 20px;
+    padding-left: 10px;
+  }
+
+  .p1 .lor {
+    font-size: 20px;
+    width: 290px;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+    padding-left: 10px;
+    text-align: justify;
+  }
+
+  .p1 .best{
+    padding-left: 10px;
+    font-size: 20px;
+  }
+
+  .baby img{
+    width: 340px;
+    position: relative;
+    left: 50%;
+  
+    transform: translateX(-50%)
+    
+   
+  }
+
+  .mybtn{
+    flex-direction: row;
+ justify-content: flex-start;
+
+  }
+ 
+  .btn1 img{
+    width: 150px;
+  }
+  .btn2 img{
+    width:130px ;
+  }
+
+  .cdf{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cau{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cyc img{
+    width: 300px;
+  }
+    .acq p {
+    font-size: 20px;
+    margin-left: 10px;
+    width: 90%;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+    text-align: justify;
+  }
+
+  .acq .mmm{
+    position: relative;
+    right: 7px;
+
+   
+  }
+
+  .acq .ura {
+    font-size: 16px;
+    position: relative;
+    right: 10px;
+    font-size: 20px;
+  }
+
+  .acq h1 {
+    font-size: 27px;
+    margin-left: 10px;
+    overflow-wrap: break-word;
+  }
+
+  .dev {
+    margin-left: 10px;
+  }
+
+  .dev p{
+    font-size: 20px;
+  }
+
+
+  .data {
+    margin-left: 10px;
+  }
+
+  .data img {
+    width: 42px;
+  }
+
+  .data p{
+    font-size: 20px;
+  }
+
+  .dis button {
+    height: 40px;
+    font-size: 16px;
+    margin-left: 20px;
+    width: 40%;
+  }
+
+  .cyc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .icb{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ipsum h1{
+    font-size: 25px;
+  }
+
+  .ipsum .cool{
+
+    font-size: 20px;
+    width: 300px;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+    text-align: justify;
+  }
+
+  .ipsum p{
+
+    font-size: 20px;
+    width: 300px;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+    text-align: justify;
+
+  }
+
+  .ipsum .elit{
+    font-size: 20px;
+  }
+
+  .bacha img{
+    width: 300px;
+    margin-top: 40px;
+  }
+
+  .ipsum button{
+    font-size: 16px;
+    margin-left: 10px;
+  }
+
+  .ipsum{
+    margin-left: 10px;
+  }
+  
+
+  .dgl{
+    flex-direction: column;
+    align-items: center;
+  }
+
+   .dolor img{
+    width: 300px;
+    margin-top: 40px;
+  }
+  .dolor {
+    height: auto; 
+    padding-bottom: 20px;
+  }
+
+  .free .amet {
+    width: 100%;
+    font-size: 20px;
+    padding: 0 10px;
+    text-align: justify;
+  }
+
+  .free .size{
+    font-size: 20px;
+  }
+
+  .free h1{
+    font-size: 27px;
+  }
+
+  .dgl {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+    gap: 20px;
+  }
+
+  .fas {
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    
+  }
+
+  .now img{
+    width: 100px;
+  }
+  .tet img{
+    width: 90px;
+  }
+
+
+
+.allcards{
+  flex-direction: column;
+  align-items: center;
+}
+
+.card1{
+  width: 340px;
+}
+
+.card1 img{
+  width: 300px;
+  margin-top: 20px;
+}
+
+.card1 button{
+  width: 210px;
+}
+
+.card1 h1{
+  font-size: 30px;
+  padding-top: 20px;
+}
+
+
+.footer{
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.vdc p{
+  font-size: 20px;
+  width: 300px;
+  line-height: 1.3;
+  overflow-wrap: break-word;
+  text-align: justify;
+}
+
+.company h2{
+
+  font-size: 30px;
+}
+
+.company p{
+
+  font-size: 20px;
+}
+
+.useful h2{
+  font-size:30px ;
+}
+
+.useful p{
+  font-size: 20px;
+}
+
+.touch h2{
+  font-size:30px ;
+}
+
+.touch p{
+  font-size: 20px;
+}
+
+.feat p{
+  font-size: 20px;
+}
+
+.rec p{
+  font-size: 20px;
+}
+
+ 
+
+
+}
+
+
+
+
+@media (min-width:501px) and (max-width:580px) {
+ 
+  .nav {
+  will-change: transform;
+}
+
+
+   .hamburger {
+    display: block;
+    background-color: orange;
+    width: 40px;
+    padding-left: 10px;
+  }
+
+
+
+  .navlink {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    padding-top: 30px;
+    height: auto;
+    padding-bottom: 20px;
+    width: 100%;
+  }
+
+  .link {
+    color: white;
+    font-size: 25px;
+  }
+
+  .navlink.open {
+    transform: translateX(-50%);
+  }
+
+  .close {
+    display: block;
+    font-size: 28px;
+    color: black;
+
+  }
+
+  .navlink button {
+    width: 300px;
+    border-radius: 10px;
+    height: 50px;
+    font-size: 25px;
+  }
+
+  .bbl {
+    flex-direction: column;
+    transform: translateY(-160px);
+
+    
+  }
+
+ .p1{
+  padding-left: 7px;
+ }
+  
+
+
+  .p1 h1 {
+    font-size: 46px;
+    width: 490px;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+    padding-top: 20px;
+    padding-left: 10px;
+  }
+
+  .p1 .lor {
+    font-size: 27px;
+    width: 440px;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+    padding-left: 10px;
+    text-align: justify;
+
+  }
+
+  .p1 .best{
+    padding-left: 10px;
+    font-size: 25px;
+  }
+
+  .baby img{
+    width: 340px;
+    position: relative;
+    left: 50%;
+  
+    transform: translateX(-50%)
+    
+   
+  }
+
+  .mybtn{
+    flex-direction: row;
+ justify-content: flex-start;
+
+  }
+ 
+  .btn1 img{
+    width: 150px;
+  }
+  .btn2 img{
+    width:130px ;
+  }
+  .cdf{
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cau{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cyc{
+    flex-direction: column;
+    align-items: center;
+  }
+    .cyc img{
+    width: 300px;
+  }
+   .acq p {
+    font-size: 20px;
+    width: 90%;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+    margin-left: 5px;
+    text-align: justify;
+  }
+
+  .acq .ura {
+    font-size: 25px;
+    position: relative;
+    right: 4px;
+  
+
+  }
+
+  .acq h1 {
+    font-size: 27px;
+    margin-left: 10px;
+    overflow-wrap: break-word;
+  }
+    .dis button {
+    height: 40px;
+    width: 36%;
+    font-size: 20px;
+    margin-left: 20px;
+  }
+
+  .icb{
+    flex-direction: column;
+    align-items: center;
+  }
+  .ipsum h1{
+    font-size: 27px;
+  }
+
+  .ipsum .cool{
+
+    font-size: 20px;
+    width: 500px;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+  }
+
+  .ipsum p{
+
+    font-size: 20px;
+    width: 500px;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+
+  }
+  .ipsum{
+    margin-right: 14px;
+  }
+
+  .bacha img{
+    width: 300px;
+    margin-top: 40px;
+  }
+
+  .ipsum button{
+    font-size: 20px;
+    width: 40%;
+    height: 40px;
+    margin-left: 10px;
+  }
+
+  .ipsum .elit{
+    font-size: 25px;
+  }
+
+  .dgl {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+    gap: 20px;
+  }
+
+  .fas {
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    
+  }
+  .dgl{
+    flex-direction: column;
+    align-items: center;
+  }
+
+   .dolor img{
+    width: 300px;
+    margin-top: 40px;
+  }
+  .dolor {
+    height: auto; 
+    padding-bottom: 20px;
+  }
+
+  .free .amet {
+    width: 100%;
+    font-size: 18px;
+    padding: 0 10px;
+  }
+
+  .dgl {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+    gap: 20px;
+  }
+
+  .fas {
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    
+  }
+
+  .now img{
+    width: 150px;
+  }
+  .tet img{
+    width: 150px;
+  }
+
+.free .amet{
+
+  font-size: 20px;
+  text-align: justify;
+  width: 480px;
+overflow-wrap: break-word;
+}
+
+.free .size{
+  font-size: 25px;
+}
+
+
+.allcards{
+  flex-direction: column;
+  align-items: center;
+}
+
+.card1{
+  width: 340px;
+}
+
+.card1 img{
+  width: 300px;
+  margin-top: 20px;
+}
+
+.card1 button{
+  width: 210px;
+}
+
+.card1 h1{
+  font-size: 30px;
+  padding-top: 20px;
+}
+.footer{
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.vdc p{
+  font-size: 22px;
+  width: 500px;
+  overflow-wrap: break-word;
+  text-align: justify;
+}
+
+.feat p{
+  font-size: 25px;
+}
+
+.rec p{
+
+  font-size: 25px;
+}
+
+.company h2{
+font-size: 30px;
+}
+.company p{
+  font-size: 22px;
+}
+
+.useful h2{
+  font-size: 30px;
+}
+
+.useful p{
+  font-size: 22px;
+}
+
+.touch h2{
+  font-size: 30px;
+}
+
+.touch p{
+  font-size: 22px;
+}
+
+
+
+}
+
+
+
+
+
+
+@media (min-width:581px) and (max-width:825px) {
+ 
+
+  .nav {
+  will-change: transform;
+}
+  
+   .hamburger {
+    display: block;
+    background-color: orange;
+    width: 40px;
+    padding-left: 10px;
+  }
+
+ 
+
+  .navlink {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    padding-top: 30px;
+    height: auto;
+    padding-bottom: 20px;
+    width: 100%;
+  }
+
+  .link {
+    color: white;
+    font-size: 35px;
+  }
+
+  .navlink.open {
+    transform: translateX(-50%);
+  }
+
+  .close {
+    display: block;
+    font-size: 28px;
+    color: black;
+
+  }
+
+  .navlink button {
+    width: 300px;
+    border-radius: 10px;
+    height: 50px;
+    font-size: 35px;
+  }
+
+  .bbl {
+    flex-direction: column;
+    transform: translateY(-160px);
+
+    
+  }
+
+ .p1{
+  padding-left: 7px;
+ }
+  
+
+  .p1 h1 {
+    font-size: 66px;
+    width: 650px;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+    padding-top: 20px;
+    padding-left: 10px;
+  }
+
+  .p1 .lor {
+    font-size: 37px;
+    width: 640px;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+    padding-left: 10px;
+    text-align: justify;
+
+  }
+
+  .p1 .best{
+    padding-left: 20px;
+    font-size: 35px;
+  }
+
+  .baby img{
+    width: 450px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%)
+    
+  }
+
+  .mybtn{
+    flex-direction: row;
+ justify-content: flex-start;
+
+  }
+ 
+  .btn1 img{
+    width: 250px;
+  }
+  .btn2 img{
+    width:230px ;
+  }
+  .cdf{
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .easy{
+    width: 500px;
+    height: 300px;
+  }
+
+  .easy p{
+    font-size: 30px;
+  }
+
+  .easy h1{
+    font-size: 50px;
+  }
+
+   .manage{
+    width: 500px;
+    height: 300px;
+  }
+
+  .manage p{
+    font-size: 30px;
+  }
+
+  .manage h1{
+    font-size: 50px;
+  }
+
+  .fully{
+    width: 500px;
+    height: 300px;
+  }
+
+  .fully p{
+    font-size: 30px;
+  }
+
+  .fully h1{
+    font-size: 50px;
+  }
+
+  .trial{
+    width: 500px;
+    height: 300px;
+  }
+
+  .trial p{
+    font-size: 30px;
+  }
+
+  .trial h1{
+    font-size: 50px;
+  }
+
+  .cau{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cyc{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cyc img{
+    width: 450px;
+  }
+
+.acq .ura{
+  position: relative;
+  right:7px;
+}
+.acq h1{
+  font-size: 40px;
+}
+.acq p{
+  font-size: 30px;
+  text-align: justify;
+}
+
+.icb{
+  flex-direction: column;
+  align-items: center;
+}
+
+.ipsum h1{
+  font-size: 40px;
+}
+.ipsum .cool{
+  font-size: 30px;
+  text-align: justify;
+}
+
+.ipsum p{
+  font-size: 30px;
+  text-align: justify;
+}
+
+.ipsum button{
+width: 37%;
+  height:60px;
+  font-size: 27px;
+    position: relative;
+  right: 4px;
+}
+
+.dis button{
+  width: 35%;
+  height:60px;
+  font-size: 27px;
+
+
+}
+
+.ipsum{
+  margin-right: 37px;
+}
+
+.dgl {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 100px;
+    gap: 20px;
+  }
+
+  .fas {
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    
+  }
+
+  .dolor img{
+    width: 450px;
+  }
+
+  .free .amet{
+    font-size: 30px;
+    width: 700px;
+    overflow-wrap: break-word;
+    text-align: justify;
+  }
+  .free h1{
+    font-size: 40px;
+  }
+  .allcards{
+  flex-direction: column;
+  align-items: center;
+}
+
+.free .size{
+  font-size: 35px;
+}
+
+.card1{
+  width: 640px;
+  height: auto;
+  padding-bottom: 30px;
+}
+
+.card1 img{
+  width: 500px;
+  margin-top: 20px;
+}
+
+.card1 button{
+  width: 310px;
+  height: 80px;
+}
+
+.card1 h1{
+  font-size: 30px;
+  padding-top: 20px;
+}
+
+.rec p{
+  font-size: 35px;
+}
+
+.rec h1{
+  font-size: 45px;
+}
+
+.footer{
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.vdc p{
+  font-size: 35px;
+  width: 600px;
+  overflow-wrap: break-word;
+  text-align: justify;
+}
+
+.vdc h1{
+  font-size: 45px;
+}
+
+.feat p{
+  font-size: 35px;
+}
+
+.feat h1{
+  font-size: 50px;
+}
+
+.company h2{
+  font-size: 40px;
+}
+
+.company p{
+  font-size: 35px;
+}
+
+.useful h2{
+  font-size: 40px;
+}
+
+.useful p{
+  font-size: 35px;
+}
+
+.touch h2{
+  font-size: 40px;
+}
+
+.touch p{
+  font-size: 35px;
+}
+
+
+}
+
+
+
+
+
+@media (min-width:826px) and (max-width:1026px) {
+ 
+
+
+
+
+
+
+
+  .bbl {
+    flex-direction: column;
+    transform: translateY(-160px);
+
+    
+  }
+
+ .p1{
+  padding-left: 7px;
+ }
+  
+  .p1 h1 {
+    font-size: 60px;
+    width: 800px;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+    padding-top: 20px;
+    padding-left: 10px;
+  }
+
+  .p1 .lor {
+    font-size:45px;
+    width: 810px;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+    padding-left: 10px;
+    text-align: justify;
+
+  }
+
+  .p1 .best{
+    padding-left: 20px;
+    font-size: 45px;
+  }
+
+  .baby img{
+    width: 640px;
+    position: relative;
+    left: 50%;
+  
+    transform: translateX(-50%)
+    
+   
+  }
+
+  .mybtn{
+    flex-direction: row;
+ justify-content: flex-start;
+
+  }
+ 
+  .btn1 img{
+    width: 250px;
+  }
+  .btn2 img{
+    width:230px ;
+  }
+
+  .cdf{
+    flex-direction: column;
+    align-items: center;
+    
+   
+  }
+
+  .easy{
+    width: 600px;
+    height: 350px;
+  }
+
+  .easy p{
+    font-size: 45px;
+  }
+
+  .easy h1{
+    font-size: 50px;
+  }
+
+  .easy img{
+    width: 100px;
+  }
+
+   .manage{
+    width: 600px;
+    height: 350px;
+  }
+
+  .manage p{
+    font-size: 45px;
+  }
+
+  .manage h1{
+    font-size: 50px;
+  }
+  .manage img{
+    width: 100px;
+  }
+
+  .fully{
+    width: 600px;
+    height: 350px;
+  }
+
+  .fully p{
+    font-size: 45px;
+  }
+
+  .fully h1{
+    font-size: 50px;
+  }
+
+  .fully img{
+    width: 100px;
+  }
+
+  .trial{
+    width: 600px;
+    height: 350px;
+  }
+
+  .trial p{
+    font-size: 45px;
+  }
+
+  .trial h1{
+    font-size: 50px;
+  }
+
+  .trial img{
+    width: 100px;
+  }
+
+  .cyc{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cau{
+    flex-direction:column;
+    align-items: center;
+    margin-left: 10px;
+  }
+
+  .cyc img{
+    width: 470px;
+  }
+
+  .bacha img{
+    width: 470px;
+  }
+
+  .acq h1{
+    font-size: 60px;
+  }
+
+  .acq p{
+    font-size: 45px;
+    text-align: justify;
+  }
+
+  .acq .ura{
+    position: relative;
+    right:8px ;
+    font-size: 45px;
+  }
+
+ .data img {
+  width: 65px;
+ }
+
+ .data h2{
+  font-size: 50px;
+ }
+
+
+ .dev img {
+  width: 65px;
+ }
+
+ .dev h2{
+  font-size: 50px;
+ }
+
+ .dis button{
+  width: 300px;
+  font-size: 37px;
+  height: 80px;
+  position: relative;
+  right: 10px;
+  
+ }
+
+
+
+
+
+
+  .icb{
+    flex-direction: column;
+  }
+
+  .ipsum h1{
+    font-size: 60px;
+  }
+
+  .ipsum p{
+    font-size: 45px;
+    text-align: justify;
+  }
+
+  .ipsum .cool{
+    font-size: 45px;
+  }
+
+.ipsum{
+  margin-left: 20px;
+}
+
+.ipsum .elit{
+  font-size: 45px;
+}
+
+.ipsum button{
+ width: 300px;
+  font-size: 37px;
+  height: 80px;
+}
+
+.acq{
+  margin-left: 20px;
+}
+
+
+  .dolor{
+     background-color: #3D244E
+  }
+
+  .dgl {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 100px;
+    gap: 20px;
+  }
+
+  .fas {
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    
+  }
+   .dolor img{
+    width: 450px;
+  }
+
+  .free .amet{
+    font-size: 45px;
+    width: 800px;
+    overflow-wrap: break-word;
+    text-align: justify;
+  }
+
+  .free h1{
+    font-size: 50px;
+  }
+
+  .free p{
+    font-size: 30px;
+  }
+
+  .free .size{
+
+    font-size: 45px;
+  }
+
+  .allcards{
+  flex-direction: column;
+  align-items: center;
+}
+
+.card1{
+  width: 640px;
+  height: auto;
+  padding-bottom: 30px;
+}
+
+.card1 img{
+  width: 500px;
+  margin-top: 20px;
+}
+
+.card1 button{
+  width: 310px;
+  height: 80px;
+  font-size: 30px;
+}
+
+.card1 h1{
+  font-size: 30px;
+  padding-top: 20px;
+}
+
+.rec p{
+  font-size: 35px;
+}
+
+.rec h1{
+  font-size: 45px;
+}
+
+
+.footer{
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.vdc p{
+  font-size: 40px;
+  width: 750px;
+  overflow-wrap: break-word;
+  text-align: justify;
+}
+
+.vdc h1{
+  font-size: 60px;
+}
+.vdc p{
+  font-size: 45px;
+}
+
+.feat p{
+  font-size: 45px;
+}
+
+.feat h1{
+  font-size: 60px;
+}
+
+.rec p{
+  font-size: 45px;
+}
+
+.rec h1{
+  font-size: 60px;
+}
+
+.company h2{
+  font-size: 50px;
+}
+
+.company p{
+  font-size: 45px;
+}
+
+.useful h2{
+  font-size: 50px;
+}
+
+.useful p{
+  font-size: 45px;
+}
+
+.touch h2{
+  font-size: 50px;
+}
+
+.touch p{
+  font-size: 45px;
+}
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+@media (min-width:1026px) and (max-width:1290px) {
+ 
+  .bbl {
+    flex-direction: column;
+    transform: translateY(-160px);
+
+    
+  }
+
+ .p1{
+  padding-left: 7px;
+ }
+  
+
+
+  .p1 h1 {
+    font-size: 56px;
+    width: 1100px;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+    padding-top: 20px;
+    padding-left: 10px;
+  }
+
+  .p1 .lor {
+    font-size: 35px;
+    width: 1180px;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+    padding-left: 10px;
+
+  }
+
+  .p1 .best{
+    padding-left: 20px;
+    font-size: 25px;
+  }
+
+  .baby img{
+    width: 640px;
+    position: relative;
+    left: 50%;
+  
+    transform: translateX(-50%)
+    
+   
+  }
+
+  .mybtn{
+    flex-direction: row;
+ justify-content: flex-start;
+
+  }
+ 
+  .btn1 img{
+    width: 300px;
+  }
+  .btn2 img{
+    width:280px ;
+  }
+
+  .cdf{
+    gap: 20px;
+  }
+
+  .cau{
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .cyc{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .cyc img{
+    width: 400px;
+  }
+
+  .bacha img{
+    width: 400px;
+  }
+
+  .vdc h1{
+    font-size: 40px;
+  }
+
+  .vdc p{
+    font-size: 25px;
+  }
+
+  .company h2{
+    font-size:40px ;
+  }
+
+  .useful h2{
+    font-size: 40px;
+  }
+
+  .touch h2{
+    font-size: 40px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
