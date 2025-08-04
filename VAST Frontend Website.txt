@@ -368,8 +368,6 @@ body {
   margin: 0;
   padding: 0;
  
-  
- 
 }
 
 .nav {
@@ -1745,6 +1743,12 @@ font-size: 30px;
     font-size: 50px;
   }
 
+  .easy img{
+    width: 80px;
+  }
+ 
+ 
+
    .manage{
     width: 500px;
     height: 300px;
@@ -1756,6 +1760,10 @@ font-size: 30px;
 
   .manage h1{
     font-size: 50px;
+  }
+
+  .manage img{
+    width: 80px;
   }
 
   .fully{
@@ -1771,6 +1779,10 @@ font-size: 30px;
     font-size: 50px;
   }
 
+  .fully img{
+    width: 80px;
+  }
+
   .trial{
     width: 500px;
     height: 300px;
@@ -1782,6 +1794,10 @@ font-size: 30px;
 
   .trial h1{
     font-size: 50px;
+  }
+
+  .trial img{
+    width: 80px;
   }
 
   .cau{
@@ -2468,11 +2484,6 @@ width: 37%;
   }
 
 }
-
-
-
-
-
 
 
 
