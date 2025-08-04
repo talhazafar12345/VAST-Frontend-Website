@@ -1125,8 +1125,11 @@ text-align: center;
   }
 
   .ipsum button{
+    height: 40px;
     font-size: 16px;
     margin-left: 10px;
+    width: 42%;
+ 
   }
 
   .ipsum{
@@ -2063,7 +2066,7 @@ width: 37%;
   .easy{
     width: 600px;
     height: 350px;
-    padding-botton:10px
+    padding-bottom:10px ;
 
   }
 
@@ -2099,7 +2102,7 @@ width: 37%;
   .fully{
     width: 600px;
     height: 350px;
-    padding--bottom:10px
+    padding-bottom:10px
   }
 
   .fully p{
@@ -2183,14 +2186,13 @@ width: 37%;
   font-size: 50px;
  }
 
- .dis button{
-  width: 300px;
+ .dis button {
+    width: 300px;
   font-size: 37px;
   height: 80px;
-  position: relative;
-  right: 10px;
-  
- }
+  margin-left: 10px;
+  }
+
 
 
 
@@ -2223,9 +2225,11 @@ width: 37%;
 }
 
 .ipsum button{
- width: 300px;
+ width: 307px;
   font-size: 37px;
   height: 80px;
+  position: relative;
+  left: 18px;
 }
 
 .acq{
@@ -2489,14 +2493,3 @@ width: 37%;
   }
 
 }
-
-
-
-
-
-
-
-
-
-
-
